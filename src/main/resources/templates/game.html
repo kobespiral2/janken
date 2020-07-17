@@ -13,15 +13,13 @@
     </h1>
 
     <div>
-      <input type="button" value="グー" />
-      <input type="button" value="チョキ" />
-      <input type="button" value="パー" />
+      <a href="./game?hand=0"><button>グー</button></a>
+      <a href="./game?hand=1"><button>チョキ</button></a>
+      <a href="./game?hand=2"><button>パー</button></a>
     </div>
 
     <div>
-      <p>
-        自分の手：
-      </p>
+      <p>自分の手：<span th:text="${userHand}"></span></p>
       <p>
         相手の手：
       </p>
