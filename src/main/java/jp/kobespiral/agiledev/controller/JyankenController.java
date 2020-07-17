@@ -18,10 +18,11 @@ public class JyankenController {
 
   @GetMapping("/game")
   public String postHand(@RequestParam(name = "hand", required = false) Integer hand, Model model) {
-    if (hand != null)
+    if (hand != null) {
       model.addAttribute("userHand", js.saveHand(hand));
-    else
-      model.addAttribute("userHand", "sashimi");
+      model.addAttribute("cpuHand", js.decideCpuHand());
+      model.addAttribute("result", js.judge());
+    }
     return "game";
   }
 
