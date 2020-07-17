@@ -26,9 +26,4 @@ public class JyankenController {
     return "game";
   }
 
-  // @GetMapping("/game")
-  // public String postHand(Model model) {
-  // model.addAttribute("userHand", "sashimi");
-  // return "game";
-  // }
 }
